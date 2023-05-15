@@ -10,11 +10,36 @@ using System.Windows.Forms;
 
 namespace NANAMARKET
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hola mundo");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                //UsuarioAutenticado = Cancelar;
+                Application.Exit();
+            }
+
+            if (result == DialogResult.No)
+            {
+
+            }
         }
     }
 }
